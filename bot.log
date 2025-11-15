@@ -1,0 +1,630 @@
+2025-11-15 16:55:19,257 - __main__ - INFO - Bot initialized successfully
+2025-11-15 16:55:19,793 - __main__ - INFO - Database initialized successfully
+2025-11-15 16:55:19,814 - app - INFO - Bot initialized successfully
+2025-11-15 16:55:19,900 - __main__ - INFO - Starting bot polling...
+2025-11-15 16:55:20,369 - aiogram - INFO - Bot: Random [@randomwinerbot]
+2025-11-15 16:55:21,522 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 16:55:21,523 - __main__ - INFO - Bot is starting up...
+2025-11-15 16:55:21,523 - __main__ - INFO - Giveaway monitoring started
+2025-11-15 16:55:21,524 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 16:57:04,996 - __main__ - INFO - Bot initialized successfully
+2025-11-15 16:57:05,017 - __main__ - INFO - Database initialized successfully
+2025-11-15 16:57:05,029 - app - INFO - Bot initialized successfully
+2025-11-15 16:57:05,059 - __main__ - INFO - Starting bot polling...
+2025-11-15 16:57:05,440 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 16:57:05,595 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 16:57:05,595 - __main__ - INFO - Bot is starting up...
+2025-11-15 16:57:05,596 - __main__ - INFO - Giveaway monitoring started
+2025-11-15 16:57:05,600 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 17:04:40,313 - app - ERROR - Failed to initialize bot: There is no current event loop in thread 'MainThread'.
+2025-11-15 17:07:53,739 - bot - INFO - Bot initialized successfully
+2025-11-15 17:07:53,873 - bot - INFO - Database initialized successfully
+2025-11-15 17:07:53,908 - bot - INFO - All handlers imported and registered
+2025-11-15 17:07:53,908 - bot - INFO - Starting bot polling...
+2025-11-15 17:07:54,293 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 17:07:55,449 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 17:07:55,449 - bot - INFO - Bot is starting up...
+2025-11-15 17:07:55,449 - bot - INFO - Giveaway monitoring started
+2025-11-15 17:07:55,450 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 17:19:55,661 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<manage_active_giveaways() done, defined at E:\Giveaways\telegram-giveaway-bot\handlers\admin\functions_for_active_gives\monitoring_giveaways.py:17> exception=AttributeError("type object 'ChatType' has no attribute 'SUPERGROUP'")>
+Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\functions_for_active_gives\monitoring_giveaways.py", line 43, in manage_active_giveaways
+    chat_type=types.ChatType.SUPERGROUP,
+AttributeError: type object 'ChatType' has no attribute 'SUPERGROUP'
+2025-11-15 17:20:53,328 - bot - INFO - Bot initialized successfully
+2025-11-15 17:22:00,749 - bot - INFO - Bot initialized successfully
+2025-11-15 17:22:00,950 - bot - INFO - Database initialized successfully
+2025-11-15 17:22:00,982 - bot - INFO - All handlers imported and registered
+2025-11-15 17:22:00,982 - bot - INFO - Starting bot polling...
+2025-11-15 17:22:01,399 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 17:22:01,575 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 17:22:01,575 - bot - INFO - Bot is starting up...
+2025-11-15 17:22:01,575 - bot - INFO - Giveaway monitoring started
+2025-11-15 17:22:01,576 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 17:22:01,579 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<manage_active_giveaways() done, defined at E:\Giveaways\telegram-giveaway-bot\handlers\admin\functions_for_active_gives\monitoring_giveaways.py:17> exception=NameError("Invalid filter name(s): 'chat_type'")>
+Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\functions_for_active_gives\monitoring_giveaways.py", line 40, in manage_active_giveaways
+    dp.register_message_handler(
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 397, in register_message_handler
+    filters_set = self.filters_factory.resolve(self.message_handlers,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\filters\factory.py", line 52, in resolve
+    filters_set.extend(self._resolve_registered(event_handler,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\filters\factory.py", line 73, in _resolve_registered
+    raise NameError("Invalid filter name(s): '" + "', ".join(full_config.keys()) + "'")
+NameError: Invalid filter name(s): 'chat_type'
+2025-11-15 17:23:03,043 - bot - INFO - Bot initialized successfully
+2025-11-15 17:23:03,172 - bot - INFO - Database initialized successfully
+2025-11-15 17:23:03,202 - bot - INFO - All handlers imported and registered
+2025-11-15 17:23:03,202 - bot - INFO - Starting bot polling...
+2025-11-15 17:23:03,639 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 17:23:03,796 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:23:04,793 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 17:23:04,794 - bot - INFO - Bot is starting up...
+2025-11-15 17:23:04,794 - bot - INFO - Giveaway monitoring started
+2025-11-15 17:23:04,794 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 17:23:08,887 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:23:13,997 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:23:19,075 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:23:24,205 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:23:29,289 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 136, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2025-11-15 17:26:09,547 - bot - INFO - Bot initialized successfully
+2025-11-15 17:26:09,677 - bot - INFO - Database initialized successfully
+2025-11-15 17:26:09,707 - bot - INFO - All handlers imported and registered
+2025-11-15 17:26:09,707 - bot - INFO - Starting bot polling...
+2025-11-15 17:26:10,163 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 17:26:11,317 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 17:26:11,317 - bot - INFO - Bot is starting up...
+2025-11-15 17:26:11,318 - bot - INFO - Giveaway monitoring started
+2025-11-15 17:26:11,320 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 17:30:50,906 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 103, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 608, in _request
+    await resp.start(conn)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client_reqrep.py", line 976, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\streams.py", line 640, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError: Server disconnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 106, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ServerDisconnectedError: Server disconnected
+2025-11-15 17:37:53,178 - bot - INFO - Bot initialized successfully
+2025-11-15 17:48:02,555 - bot - INFO - Bot initialized successfully
+2025-11-15 17:48:03,192 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error in check_channels_subscriptions: list index out of range
+2025-11-15 17:49:20,201 - bot - INFO - Bot initialized successfully
+2025-11-15 17:57:33,262 - bot - INFO - Bot initialized successfully
+2025-11-15 17:57:33,392 - bot - INFO - Database initialized successfully
+2025-11-15 17:57:33,423 - bot - INFO - All handlers imported and registered
+2025-11-15 17:57:33,423 - bot - INFO - Starting bot polling...
+2025-11-15 17:57:33,811 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 17:57:33,969 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 17:57:33,970 - bot - INFO - Bot is starting up...
+2025-11-15 17:57:33,970 - bot - INFO - Giveaway monitoring started
+2025-11-15 17:57:33,971 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 18:00:40,489 - bot - INFO - Bot initialized successfully
+2025-11-15 18:00:40,682 - bot - INFO - Database initialized successfully
+2025-11-15 18:00:40,734 - bot - INFO - All handlers imported and registered
+2025-11-15 18:00:40,735 - bot - INFO - Starting bot polling...
+2025-11-15 18:00:41,189 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 18:00:42,342 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 18:00:42,343 - bot - INFO - Bot is starting up...
+2025-11-15 18:00:42,344 - bot - INFO - Giveaway monitoring started
+2025-11-15 18:00:42,344 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 18:01:39,537 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 43
+2025-11-15 18:01:39,538 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 43 in group -1003471629924
+2025-11-15 18:01:39,538 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [42]
+2025-11-15 18:04:34,625 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 44
+2025-11-15 18:04:34,663 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 44
+2025-11-15 18:04:34,663 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:04:34,664 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 18:04:34,664 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 18:04:34,763 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 18:04:34,770 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 18:04:34,770 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 18:04:34,817 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:04:59,791 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 44
+2025-11-15 18:04:59,794 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 44
+2025-11-15 18:04:59,794 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 921470673 in giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:04:59,795 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 921470673 in 1 channels
+2025-11-15 18:04:59,795 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 921470673 in channel -1003180113623
+2025-11-15 18:04:59,873 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 has status 'member' in channel -1003180113623
+2025-11-15 18:04:59,875 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 is subscribed to all required channels
+2025-11-15 18:04:59,875 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 921470673: True
+2025-11-15 18:04:59,916 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 921470673 successfully added to giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:18,125 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 45
+2025-11-15 18:07:18,138 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 45
+2025-11-15 18:07:18,139 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 921470673 in giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:18,141 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 921470673 in 1 channels
+2025-11-15 18:07:18,142 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 921470673 in channel -1003180113623
+2025-11-15 18:07:18,222 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 has status 'member' in channel -1003180113623
+2025-11-15 18:07:18,224 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 is subscribed to all required channels
+2025-11-15 18:07:18,224 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 921470673: True
+2025-11-15 18:07:18,257 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 921470673 successfully added to giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:20,355 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 1087968824 (@GroupAnonymousBot) in group -1003471629924, replied to message 45
+2025-11-15 18:07:20,357 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 45
+2025-11-15 18:07:20,358 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 1087968824 in giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:20,359 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 1087968824 in 1 channels
+2025-11-15 18:07:20,359 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 1087968824 in channel -1003180113623
+2025-11-15 18:07:20,435 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 1087968824 has status 'left' in channel -1003180113623
+2025-11-15 18:07:20,435 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - WARNING - User 1087968824 not subscribed to channel -1003180113623 (status: left)
+2025-11-15 18:07:20,436 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 1087968824: False
+2025-11-15 18:07:20,436 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - User 1087968824 (@GroupAnonymousBot) failed subscription check for giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:33,402 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 45
+2025-11-15 18:07:33,406 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 45
+2025-11-15 18:07:33,406 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:07:33,406 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 18:07:33,407 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 18:07:33,483 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 18:07:33,488 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 18:07:33,489 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 18:07:33,540 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway Gs74lOwVCVqKOG2xkaRPUgAGCeS67l4vptDpZ2AL
+2025-11-15 18:12:49,438 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 282, in _loop_reading
+    length = fut.result()
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 817, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 485, in finish_recv
+    return ov.getresult()
+ConnectionAbortedError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 103, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 608, in _request
+    await resp.start(conn)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client_reqrep.py", line 976, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\streams.py", line 640, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 106, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2025-11-15 18:32:51,971 - bot - INFO - Bot initialized successfully
+2025-11-15 18:32:52,109 - bot - INFO - Database initialized successfully
+2025-11-15 18:32:52,157 - bot - INFO - All handlers imported and registered
+2025-11-15 18:32:52,157 - bot - INFO - Starting bot polling...
+2025-11-15 18:32:52,601 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 18:32:53,761 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 18:32:53,761 - bot - INFO - Bot is starting up...
+2025-11-15 18:32:53,761 - bot - INFO - Giveaway monitoring started
+2025-11-15 18:32:53,762 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 18:33:12,662 - handlers.admin.bot_settings - INFO - Keyword updated to: пенис
+2025-11-15 18:39:20,601 - bot - INFO - Bot initialized successfully
+2025-11-15 18:39:20,815 - bot - INFO - Database initialized successfully
+2025-11-15 18:39:20,869 - bot - INFO - All handlers imported and registered
+2025-11-15 18:39:20,869 - bot - INFO - Starting bot polling...
+2025-11-15 18:39:21,312 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 18:39:22,467 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 18:39:22,468 - bot - INFO - Bot is starting up...
+2025-11-15 18:39:22,469 - bot - INFO - Giveaway monitoring started
+2025-11-15 18:39:22,472 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 18:39:36,241 - handlers.admin.bot_settings - INFO - Keyword updated to: пенис
+2025-11-15 18:40:29,658 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 49
+2025-11-15 18:40:29,659 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 49 in group -1003471629924
+2025-11-15 18:40:29,659 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [45]
+2025-11-15 18:40:34,522 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 49
+2025-11-15 18:40:34,522 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 49 in group -1003471629924
+2025-11-15 18:40:34,522 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [45]
+2025-11-15 18:40:51,015 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 49
+2025-11-15 18:40:51,015 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 49 in group -1003471629924
+2025-11-15 18:40:51,016 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [45]
+2025-11-15 18:42:39,639 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 50
+2025-11-15 18:42:39,645 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 50
+2025-11-15 18:42:39,645 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 18:42:39,646 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 18:42:39,646 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 18:42:39,725 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 18:42:39,728 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 18:42:39,728 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 18:42:39,775 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 18:42:42,966 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 50
+2025-11-15 18:42:42,969 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 50
+2025-11-15 18:42:42,970 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 921470673 in giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 18:42:42,970 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 921470673 in 1 channels
+2025-11-15 18:42:42,970 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 921470673 in channel -1003180113623
+2025-11-15 18:42:43,047 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 has status 'member' in channel -1003180113623
+2025-11-15 18:42:43,050 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 is subscribed to all required channels
+2025-11-15 18:42:43,050 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 921470673: True
+2025-11-15 18:42:43,100 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 921470673 successfully added to giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 18:42:43,233 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 50
+2025-11-15 18:42:43,237 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 50
+2025-11-15 18:42:43,237 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 6515272893 in giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 18:42:43,240 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 6515272893 in 1 channels
+2025-11-15 18:42:43,241 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 6515272893 in channel -1003180113623
+2025-11-15 18:42:43,359 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 has status 'member' in channel -1003180113623
+2025-11-15 18:42:43,362 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 is subscribed to all required channels
+2025-11-15 18:42:43,362 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 6515272893: True
+2025-11-15 18:42:43,409 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 6515272893 successfully added to giveaway buSQRS9pE9Ioh8lGeNMzzv6nRikdGNtEriVkCrqM
+2025-11-15 19:07:15,706 - bot - INFO - Bot initialized successfully
+2025-11-15 19:07:15,847 - bot - INFO - Database initialized successfully
+2025-11-15 19:07:15,885 - bot - INFO - All handlers imported and registered
+2025-11-15 19:07:15,885 - bot - INFO - Starting bot polling...
+2025-11-15 19:07:16,333 - aiogram - INFO - Bot: test [@testolegavpopubot]
+2025-11-15 19:07:17,491 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:07:17,491 - bot - INFO - Bot is starting up...
+2025-11-15 19:07:17,491 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:07:17,492 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:07:38,043 - handlers.admin.bot_settings - INFO - Keyword updated to: иван
+2025-11-15 19:08:53,730 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 51
+2025-11-15 19:08:53,731 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 51 in group -1003471629924
+2025-11-15 19:08:53,731 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [50]
+2025-11-15 19:13:42,675 - bot - INFO - Bot initialized successfully
+2025-11-15 19:13:42,885 - bot - INFO - Database initialized successfully
+2025-11-15 19:13:42,933 - bot - INFO - All handlers imported and registered
+2025-11-15 19:13:42,933 - bot - INFO - Starting bot polling...
+2025-11-15 19:13:43,383 - aiogram - INFO - Bot: Randomwin [@randomwinn3rbot]
+2025-11-15 19:13:43,543 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:13:43,543 - bot - INFO - Bot is starting up...
+2025-11-15 19:13:43,543 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:13:43,545 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:16:59,205 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 52
+2025-11-15 19:16:59,211 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 52
+2025-11-15 19:16:59,211 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:16:59,211 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 19:16:59,211 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 19:16:59,327 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 19:16:59,330 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 19:16:59,330 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 19:16:59,372 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:03,904 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 52
+2025-11-15 19:17:03,907 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 52
+2025-11-15 19:17:03,908 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 6515272893 in giveaway Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:03,908 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 6515272893 in 1 channels
+2025-11-15 19:17:03,909 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 6515272893 in channel -1003180113623
+2025-11-15 19:17:04,077 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 has status 'member' in channel -1003180113623
+2025-11-15 19:17:04,079 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 is subscribed to all required channels
+2025-11-15 19:17:04,079 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 6515272893: True
+2025-11-15 19:17:04,139 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 6515272893 successfully added to giveaway Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:17,746 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:17:17,747 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:17,748 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:17,752 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:17:17,752 - handlers.admin.early_finish_giveaway - ERROR - Error in early finish confirmation: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+2025-11-15 19:17:17,753 - handlers.admin.early_finish_giveaway - ERROR - Full traceback: Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\early_finish_giveaway.py", line 60, in early_finish_giveaway_confirm
+    stats = await GiveAwayStatistic().get_statistic_data(callback_value)
+AttributeError: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+
+2025-11-15 19:17:21,053 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:17:21,053 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:21,054 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:21,054 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:17:21,055 - handlers.admin.early_finish_giveaway - ERROR - Error in early finish confirmation: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+2025-11-15 19:17:21,055 - handlers.admin.early_finish_giveaway - ERROR - Full traceback: Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\early_finish_giveaway.py", line 60, in early_finish_giveaway_confirm
+    stats = await GiveAwayStatistic().get_statistic_data(callback_value)
+AttributeError: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+
+2025-11-15 19:17:25,722 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:17:25,723 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:25,723 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:25,723 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:17:25,724 - handlers.admin.early_finish_giveaway - ERROR - Error in early finish confirmation: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+2025-11-15 19:17:25,724 - handlers.admin.early_finish_giveaway - ERROR - Full traceback: Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\early_finish_giveaway.py", line 60, in early_finish_giveaway_confirm
+    stats = await GiveAwayStatistic().get_statistic_data(callback_value)
+AttributeError: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+
+2025-11-15 19:17:46,237 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:17:46,237 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:46,238 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:17:46,238 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:17:46,239 - handlers.admin.early_finish_giveaway - ERROR - Error in early finish confirmation: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+2025-11-15 19:17:46,239 - handlers.admin.early_finish_giveaway - ERROR - Full traceback: Traceback (most recent call last):
+  File "E:\Giveaways\telegram-giveaway-bot\handlers\admin\early_finish_giveaway.py", line 60, in early_finish_giveaway_confirm
+    stats = await GiveAwayStatistic().get_statistic_data(callback_value)
+AttributeError: 'GiveAwayStatistic' object has no attribute 'get_statistic_data'
+
+2025-11-15 19:21:49,357 - bot - INFO - Bot initialized successfully
+2025-11-15 19:21:49,564 - bot - INFO - Database initialized successfully
+2025-11-15 19:21:49,599 - bot - INFO - All handlers imported and registered
+2025-11-15 19:21:49,599 - bot - INFO - Starting bot polling...
+2025-11-15 19:21:50,054 - aiogram - INFO - Bot: Randomwin [@randomwinn3rbot]
+2025-11-15 19:21:51,214 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:21:51,214 - bot - INFO - Bot is starting up...
+2025-11-15 19:21:51,214 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:21:51,215 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:22:06,094 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:22:06,094 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:22:06,094 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:22:06,095 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:22:06,144 - handlers.admin.early_finish_giveaway - INFO - Participants count: 2
+2025-11-15 19:22:06,412 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation sent successfully
+2025-11-15 19:26:32,451 - bot - INFO - Bot initialized successfully
+2025-11-15 19:26:32,583 - bot - INFO - Database initialized successfully
+2025-11-15 19:26:32,617 - bot - INFO - All handlers imported and registered
+2025-11-15 19:26:32,617 - bot - INFO - Starting bot polling...
+2025-11-15 19:26:33,065 - aiogram - INFO - Bot: Randomwin [@randomwinn3rbot]
+2025-11-15 19:26:34,220 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:26:34,220 - bot - INFO - Bot is starting up...
+2025-11-15 19:26:34,221 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:26:34,223 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:26:42,014 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation by user 5935366564
+2025-11-15 19:26:42,014 - handlers.admin.early_finish_giveaway - INFO - Processing early finish for giveaway: Zvdc6kSdiB8bxqAQHh8XptmrHZBpiiv01vS50LDb
+2025-11-15 19:26:42,015 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: вонючий хуй
+2025-11-15 19:26:42,153 - handlers.admin.early_finish_giveaway - INFO - Marking giveaway as early finished...
+2025-11-15 19:26:42,303 - handlers.admin.early_finish_giveaway - INFO - Getting participant statistics...
+2025-11-15 19:26:42,357 - handlers.admin.early_finish_giveaway - INFO - Found 2 participants
+2025-11-15 19:26:42,357 - handlers.admin.early_finish_giveaway - INFO - Will select 1 winners
+2025-11-15 19:26:42,357 - handlers.admin.early_finish_giveaway - INFO - Selecting winners...
+2025-11-15 19:26:42,501 - handlers.admin.early_finish_giveaway - ERROR - Failed to notify winner 6515272893: Forbidden: bot can't initiate conversation with a user
+2025-11-15 19:26:42,501 - handlers.admin.early_finish_giveaway - INFO - Updating channel posts...
+2025-11-15 19:26:42,587 - handlers.admin.early_finish_giveaway - ERROR - Failed to update post in channel -1003180113623: There is no text in the message to edit
+2025-11-15 19:28:47,509 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 53
+2025-11-15 19:28:47,513 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 53
+2025-11-15 19:28:47,513 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 6515272893 in giveaway BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:28:47,513 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 6515272893 in 1 channels
+2025-11-15 19:28:47,513 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 6515272893 in channel -1003180113623
+2025-11-15 19:28:47,597 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 has status 'member' in channel -1003180113623
+2025-11-15 19:28:47,600 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 is subscribed to all required channels
+2025-11-15 19:28:47,600 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 6515272893: True
+2025-11-15 19:28:47,639 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 6515272893 successfully added to giveaway BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:28:57,941 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 53
+2025-11-15 19:28:57,949 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 53
+2025-11-15 19:28:57,950 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:28:57,952 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 19:28:57,952 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 19:28:58,029 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 19:28:58,033 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 19:28:58,033 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 19:28:58,073 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:29:05,220 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:29:05,221 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:29:05,221 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:29:05,222 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: виапвапв
+2025-11-15 19:29:05,222 - handlers.admin.early_finish_giveaway - INFO - Participants count: 2
+2025-11-15 19:29:05,621 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation sent successfully
+2025-11-15 19:29:06,215 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation by user 5935366564
+2025-11-15 19:29:06,216 - handlers.admin.early_finish_giveaway - INFO - Processing early finish for giveaway: BRjUCeBWHeohr6fzlFbcTfAmIx43NKpklToh85PN
+2025-11-15 19:29:06,218 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: виапвапв
+2025-11-15 19:29:06,436 - handlers.admin.early_finish_giveaway - INFO - Marking giveaway as early finished...
+2025-11-15 19:29:06,491 - handlers.admin.early_finish_giveaway - INFO - Getting participant statistics...
+2025-11-15 19:29:06,491 - handlers.admin.early_finish_giveaway - INFO - Found 2 participants
+2025-11-15 19:29:06,491 - handlers.admin.early_finish_giveaway - INFO - Will select 1 winners
+2025-11-15 19:29:06,491 - handlers.admin.early_finish_giveaway - INFO - Selecting winners...
+2025-11-15 19:29:06,737 - handlers.admin.early_finish_giveaway - ERROR - Failed to notify winner 6515272893: Forbidden: bot can't initiate conversation with a user
+2025-11-15 19:29:06,737 - handlers.admin.early_finish_giveaway - INFO - Updating channel posts...
+2025-11-15 19:29:06,998 - handlers.admin.early_finish_giveaway - INFO - Updated post in channel -1003180113623
+2025-11-15 19:34:25,589 - bot - INFO - Bot initialized successfully
+2025-11-15 19:34:25,812 - bot - INFO - Database initialized successfully
+2025-11-15 19:34:25,847 - bot - INFO - All handlers imported and registered
+2025-11-15 19:34:25,847 - bot - INFO - Starting bot polling...
+2025-11-15 19:34:26,313 - aiogram - INFO - Bot: Randomwin [@randomwinn3rbot]
+2025-11-15 19:34:27,465 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:34:27,465 - bot - INFO - Bot is starting up...
+2025-11-15 19:34:27,465 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:34:27,467 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:37:16,534 - bot - INFO - Bot initialized successfully
+2025-11-15 19:37:16,730 - bot - INFO - Database initialized successfully
+2025-11-15 19:37:16,775 - bot - INFO - All handlers imported and registered
+2025-11-15 19:37:16,775 - bot - INFO - Starting bot polling...
+2025-11-15 19:37:17,155 - aiogram - INFO - Bot: Random [@randomwinerbot]
+2025-11-15 19:37:17,309 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:37:17,309 - bot - INFO - Bot is starting up...
+2025-11-15 19:37:17,309 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:37:17,310 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:43:45,480 - bot - INFO - Bot initialized successfully
+2025-11-15 19:43:45,704 - bot - INFO - Database initialized successfully
+2025-11-15 19:43:45,738 - bot - INFO - All handlers imported and registered
+2025-11-15 19:43:45,738 - bot - INFO - Starting bot polling...
+2025-11-15 19:43:46,174 - aiogram - INFO - Bot: Random [@randomwinerbot]
+2025-11-15 19:43:47,346 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 19:43:47,346 - bot - INFO - Bot is starting up...
+2025-11-15 19:43:47,347 - bot - INFO - Giveaway monitoring started
+2025-11-15 19:43:47,347 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-11-15 19:44:59,118 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 56
+2025-11-15 19:44:59,118 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 56 in group -1003471629924
+2025-11-15 19:44:59,119 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [55]
+2025-11-15 19:45:00,500 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 56
+2025-11-15 19:45:00,501 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 56 in group -1003471629924
+2025-11-15 19:45:00,502 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [55]
+2025-11-15 19:45:01,175 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 56
+2025-11-15 19:45:01,177 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No matching giveaway found for replied message ID 56 in group -1003471629924
+2025-11-15 19:45:01,177 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Available giveaway posts in this group: [55]
+2025-11-15 19:46:37,364 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 7617472221 (@Alexandroyip) in group -1003471629924, replied to message 57
+2025-11-15 19:46:37,371 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 57
+2025-11-15 19:46:37,371 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 7617472221 in giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:46:37,372 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 7617472221 in 1 channels
+2025-11-15 19:46:37,372 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 7617472221 in channel -1003180113623
+2025-11-15 19:46:37,482 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 has status 'administrator' in channel -1003180113623
+2025-11-15 19:46:37,485 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 7617472221 is subscribed to all required channels
+2025-11-15 19:46:37,485 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 7617472221: True
+2025-11-15 19:46:37,527 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 7617472221 successfully added to giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:46:50,651 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 6515272893 (@uncrownedsociety) in group -1003471629924, replied to message 57
+2025-11-15 19:46:50,661 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 57
+2025-11-15 19:46:50,661 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 6515272893 in giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:46:50,663 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 6515272893 in 1 channels
+2025-11-15 19:46:50,663 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 6515272893 in channel -1003180113623
+2025-11-15 19:46:50,764 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 has status 'member' in channel -1003180113623
+2025-11-15 19:46:50,771 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 6515272893 is subscribed to all required channels
+2025-11-15 19:46:50,772 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 6515272893: True
+2025-11-15 19:46:50,810 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 6515272893 successfully added to giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:02,861 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 921470673 (@vanyaresht) in group -1003471629924, replied to message 57
+2025-11-15 19:47:02,864 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Channel ID: -1003180113623, Group ID: -1003471629924, Post ID: 57
+2025-11-15 19:47:02,864 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Checking channel subscriptions for user 921470673 in giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:02,864 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 921470673 in 1 channels
+2025-11-15 19:47:02,865 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 921470673 in channel -1003180113623
+2025-11-15 19:47:02,954 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 has status 'member' in channel -1003180113623
+2025-11-15 19:47:02,956 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 921470673 is subscribed to all required channels
+2025-11-15 19:47:02,957 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Subscription check result for user 921470673: True
+2025-11-15 19:47:03,009 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - User 921470673 successfully added to giveaway QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:08,934 - handlers.admin.early_finish_giveaway - INFO - Early finish requested by user 5935366564
+2025-11-15 19:47:08,934 - handlers.admin.early_finish_giveaway - INFO - Callback data: early_finish:QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:08,934 - handlers.admin.early_finish_giveaway - INFO - Giveaway callback value: QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:08,935 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: ававыавы
+2025-11-15 19:47:08,936 - handlers.admin.early_finish_giveaway - INFO - Participants count: 3
+2025-11-15 19:47:09,117 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation sent successfully
+2025-11-15 19:47:09,836 - handlers.admin.early_finish_giveaway - INFO - Early finish confirmation by user 5935366564
+2025-11-15 19:47:09,836 - handlers.admin.early_finish_giveaway - INFO - Processing early finish for giveaway: QlKGwGhCwCsngX06CBxsp4lF7R54OlvruY3Ow3p4
+2025-11-15 19:47:09,837 - handlers.admin.early_finish_giveaway - INFO - Found giveaway: ававыавы
+2025-11-15 19:47:09,966 - handlers.admin.early_finish_giveaway - INFO - Marking giveaway as early finished...
+2025-11-15 19:47:10,003 - handlers.admin.early_finish_giveaway - INFO - Getting participant statistics...
+2025-11-15 19:47:10,004 - handlers.admin.early_finish_giveaway - INFO - Found 3 participants
+2025-11-15 19:47:10,004 - handlers.admin.early_finish_giveaway - INFO - Will select 2 winners
+2025-11-15 19:47:10,004 - handlers.admin.early_finish_giveaway - INFO - Selecting winners...
+2025-11-15 19:47:10,192 - handlers.admin.early_finish_giveaway - ERROR - Failed to notify winner 6515272893: Forbidden: bot can't initiate conversation with a user
+2025-11-15 19:47:10,339 - handlers.admin.early_finish_giveaway - ERROR - Failed to notify winner 921470673: Forbidden: bot can't initiate conversation with a user
+2025-11-15 19:47:10,339 - handlers.admin.early_finish_giveaway - INFO - Creating winner results posts...
+2025-11-15 19:47:10,577 - handlers.admin.early_finish_giveaway - INFO - Created results post in channel -1003180113623
+2025-11-15 19:50:59,982 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 282, in _loop_reading
+    length = fut.result()
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 817, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 485, in finish_recv
+    return ov.getresult()
+ConnectionAbortedError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 103, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 608, in _request
+    await resp.start(conn)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client_reqrep.py", line 976, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\streams.py", line 640, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 304, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 201, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+  File "C:\Users\ars16\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 106, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2025-11-15 22:48:57,058 - bot - INFO - Bot initialized successfully
+2025-11-15 22:48:57,424 - bot - INFO - Database initialized successfully
+2025-11-15 22:48:57,492 - bot - INFO - All handlers imported and registered
+2025-11-15 22:48:57,493 - bot - INFO - Starting bot polling...
+2025-11-15 22:48:57,667 - aiogram - INFO - Bot: Random [@randomwinerbot]
+2025-11-15 22:48:58,766 - aiogram - WARNING - Updates were skipped successfully.
+2025-11-15 22:48:58,766 - bot - INFO - Bot is starting up...
+2025-11-15 22:48:58,766 - bot - INFO - Giveaway monitoring started
+2025-11-15 22:48:58,767 - aiogram.dispatcher.dispatcher - INFO - Start polling.

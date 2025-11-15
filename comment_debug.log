@@ -1,0 +1,201 @@
+2025-11-15 17:55:48,442 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-15 17:55:48,800 - bot - INFO - Bot initialized successfully
+2025-11-15 17:55:48,940 - tortoise - DEBUG - Tortoise-ORM startup
+    connections: {'default': {'engine': 'tortoise.backends.sqlite', 'credentials': {'journal_mode': 'WAL', 'journal_size_limit': 16384, 'file_path': 'db.sqlite3'}}}
+    apps: {'models': {'models': ['database.models.giveaway', 'database.models.telegram_channel', 'database.models.giveaway_statistic', 'database.models.temporary_users'], 'default_connection': 'default'}}
+2025-11-15 17:55:48,955 - tortoise - DEBUG - Creating schema: CREATE TABLE IF NOT EXISTS "giveaway" (
+    "owner_id" BIGINT NOT NULL,
+    "run_status" INT NOT NULL,
+    "type" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "callback_value" TEXT NOT NULL PRIMARY KEY,
+    "text" TEXT NOT NULL,
+    "photo_id" TEXT,
+    "video_id" TEXT,
+    "over_date" TIMESTAMP NOT NULL,
+    "captcha" INT NOT NULL,
+    "winners_count" INT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS "telegramchannel" (
+    "channel_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "group_id" BIGINT,
+    "post_id" BIGINT,
+    "owner_id" BIGINT NOT NULL,
+    "give_callback_value" TEXT NOT NULL,
+    "channel_callback_value" TEXT NOT NULL,
+    "name" TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS "giveawaystatistic" (
+    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,
+    "members" JSON,
+    "post_link" TEXT NOT NULL,
+    "winners" JSON
+);
+CREATE TABLE IF NOT EXISTS "temporaryusers" (
+    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,
+    "users" JSON
+);
+2025-11-15 17:55:48,956 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x000001F503C3DB40>
+2025-11-15 17:55:48,957 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x000001F503C3DB40> completed
+2025-11-15 17:55:48,957 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA journal_mode=WAL', [])
+2025-11-15 17:55:48,958 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA journal_mode=WAL', []) completed
+2025-11-15 17:55:48,958 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFD40>)
+2025-11-15 17:55:48,958 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFD40>) completed
+2025-11-15 17:55:48,959 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA journal_size_limit=16384', [])
+2025-11-15 17:55:48,959 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA journal_size_limit=16384', []) completed
+2025-11-15 17:55:48,959 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFDC0>)
+2025-11-15 17:55:48,959 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFDC0>) completed
+2025-11-15 17:55:48,959 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA foreign_keys=ON', [])
+2025-11-15 17:55:48,960 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x000001F504BCED40>, 'PRAGMA foreign_keys=ON', []) completed
+2025-11-15 17:55:48,960 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFD40>)
+2025-11-15 17:55:48,960 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F5056AFD40>) completed
+2025-11-15 17:55:48,960 - tortoise.db_client - DEBUG - Created connection <Connection(Thread-1, started 24076)> with params: filename=db.sqlite3 journal_mode=WAL journal_size_limit=16384 foreign_keys=ON
+2025-11-15 17:55:48,960 - tortoise.db_client - DEBUG - CREATE TABLE IF NOT EXISTS "giveaway" (
+    "owner_id" BIGINT NOT NULL,
+    "run_status" INT NOT NULL,
+    "type" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "callback_value" TEXT NOT NULL PRIMARY KEY,
+    "text" TEXT NOT NULL,
+    "photo_id" TEXT,
+    "video_id" TEXT,
+    "over_date" TIMESTAMP NOT NULL,
+    "captcha" INT NOT NULL,
+    "winners_count" INT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS "telegramchannel" (
+    "channel_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "group_id" BIGINT,
+    "post_id" BIGINT,
+    "owner_id" BIGINT NOT NULL,
+    "give_callback_value" TEXT NOT NULL,
+    "channel_callback_value" TEXT NOT NULL,
+    "name" TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS "giveawaystatistic" (
+    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,
+    "members" JSON,
+    "post_link" TEXT NOT NULL,
+    "winners" JSON
+);
+CREATE TABLE IF NOT EXISTS "temporaryusers" (
+    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,
+    "users" JSON
+);
+2025-11-15 17:55:48,960 - aiosqlite - DEBUG - executing functools.partial(<built-in method executescript of sqlite3.Connection object at 0x000001F504BCED40>, 'CREATE TABLE IF NOT EXISTS "giveaway" (\n    "owner_id" BIGINT NOT NULL,\n    "run_status" INT NOT NULL,\n    "type" TEXT NOT NULL,\n    "name" TEXT NOT NULL,\n    "callback_value" TEXT NOT NULL PRIMARY KEY,\n    "text" TEXT NOT NULL,\n    "photo_id" TEXT,\n    "video_id" TEXT,\n    "over_date" TIMESTAMP NOT NULL,\n    "captcha" INT NOT NULL,\n    "winners_count" INT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS "telegramchannel" (\n    "channel_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n    "group_id" BIGINT,\n    "post_id" BIGINT,\n    "owner_id" BIGINT NOT NULL,\n    "give_callback_value" TEXT NOT NULL,\n    "channel_callback_value" TEXT NOT NULL,\n    "name" TEXT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS "giveawaystatistic" (\n    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,\n    "members" JSON,\n    "post_link" TEXT NOT NULL,\n    "winners" JSON\n);\nCREATE TABLE IF NOT EXISTS "temporaryusers" (\n    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,\n    "users" JSON\n);')
+2025-11-15 17:55:48,961 - aiosqlite - DEBUG - operation functools.partial(<built-in method executescript of sqlite3.Connection object at 0x000001F504BCED40>, 'CREATE TABLE IF NOT EXISTS "giveaway" (\n    "owner_id" BIGINT NOT NULL,\n    "run_status" INT NOT NULL,\n    "type" TEXT NOT NULL,\n    "name" TEXT NOT NULL,\n    "callback_value" TEXT NOT NULL PRIMARY KEY,\n    "text" TEXT NOT NULL,\n    "photo_id" TEXT,\n    "video_id" TEXT,\n    "over_date" TIMESTAMP NOT NULL,\n    "captcha" INT NOT NULL,\n    "winners_count" INT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS "telegramchannel" (\n    "channel_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n    "group_id" BIGINT,\n    "post_id" BIGINT,\n    "owner_id" BIGINT NOT NULL,\n    "give_callback_value" TEXT NOT NULL,\n    "channel_callback_value" TEXT NOT NULL,\n    "name" TEXT NOT NULL\n);\nCREATE TABLE IF NOT EXISTS "giveawaystatistic" (\n    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,\n    "members" JSON,\n    "post_link" TEXT NOT NULL,\n    "winners" JSON\n);\nCREATE TABLE IF NOT EXISTS "temporaryusers" (\n    "giveaway_callback_value" TEXT NOT NULL PRIMARY KEY,\n    "users" JSON\n);') completed
+2025-11-15 17:55:48,961 - aiogram - DEBUG - Make request: "getMe" with data: "{}" and files "None"
+2025-11-15 17:55:49,352 - aiogram - DEBUG - Response for getMe: [200] "'{"ok":true,"result":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot","can_join_groups":true,"can_read_all_group_messages":false,"supports_inline_queries":false,"can_connect_to_business":false,"has_main_web_app":false}}'"
+2025-11-15 17:55:49,352 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","owner_id" "owner_id","give_callback_value" "give_callback_value","group_id" "group_id","post_id" "post_id" FROM "telegramchannel": []
+2025-11-15 17:55:49,353 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","owner_id" "owner_id","give_callback_value" "give_callback_value","group_id" "group_id","post_id" "post_id" FROM "telegramchannel"', [])
+2025-11-15 17:55:49,353 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","owner_id" "owner_id","give_callback_value" "give_callback_value","group_id" "group_id","post_id" "post_id" FROM "telegramchannel"', []) completed
+2025-11-15 17:55:49,354 - aiogram - DEBUG - Make request: "getChat" with data: "{'chat_id': -1003180113623}" and files "None"
+2025-11-15 17:55:49,477 - aiogram - DEBUG - Response for getChat: [200] "'{"ok":true,"result":{"id":-1003180113623,"title":"oleg goliy","username":"publihniyoleg","type":"channel","active_usernames":["publihniyoleg"],"invite_link":"https://t.me/+au03nL-pfbg3OTMy","can_send_gift":true,"has_visible_history":true,"linked_chat_id":-1003471629924,"can_send_paid_media":true,"accepted_gift_types":{"unlimited_gifts":true,"limited_gifts":true,"unique_gifts":true,"premium_subscription":false},"available_reactions":[],"max_reaction_count":11,"accent_color_id":1}}'"
+2025-11-15 17:55:49,478 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:49,554 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:49,555 - tortoise.db_client - DEBUG - SELECT "callback_value" "callback_value","name" "name","type" "type","owner_id" "owner_id","over_date" "over_date" FROM "giveaway" WHERE "run_status"=?: [True]
+2025-11-15 17:55:49,555 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "callback_value" "callback_value","name" "name","type" "type","owner_id" "owner_id","over_date" "over_date" FROM "giveaway" WHERE "run_status"=?', [True])
+2025-11-15 17:55:49,555 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "callback_value" "callback_value","name" "name","type" "type","owner_id" "owner_id","over_date" "over_date" FROM "giveaway" WHERE "run_status"=?', [True]) completed
+2025-11-15 17:55:49,557 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Single channel check: user 8500740359 in channel -1003180113623
+2025-11-15 17:55:49,557 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:49,635 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:49,635 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Single channel result: user 8500740359 status 'administrator' in -1003180113623 -> True
+2025-11-15 17:55:49,636 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:49,717 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:49,718 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']
+2025-11-15 17:55:49,718 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV'])
+2025-11-15 17:55:49,718 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']) completed
+2025-11-15 17:55:49,719 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:49,719 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:49,719 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:49,720 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 8500740359 in 1 channels
+2025-11-15 17:55:49,720 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 8500740359 in channel -1003180113623
+2025-11-15 17:55:49,720 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:49,796 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:49,796 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 8500740359 has status 'administrator' in channel -1003180113623
+2025-11-15 17:55:49,796 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - ✅ User 8500740359 is properly subscribed to channel -1003180113623
+2025-11-15 17:55:49,796 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 8500740359 is subscribed to all required channels
+2025-11-15 17:55:49,797 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']
+2025-11-15 17:55:49,798 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS'])
+2025-11-15 17:55:49,798 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']) completed
+2025-11-15 17:55:49,798 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:49,799 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:49,799 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:49,800 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 8500740359 in 1 channels
+2025-11-15 17:55:49,800 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 8500740359 in channel -1003180113623
+2025-11-15 17:55:49,800 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:49,880 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:49,880 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 8500740359 has status 'administrator' in channel -1003180113623
+2025-11-15 17:55:49,880 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - ✅ User 8500740359 is properly subscribed to channel -1003180113623
+2025-11-15 17:55:49,880 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 8500740359 is subscribed to all required channels
+2025-11-15 17:55:49,880 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Single channel check: user 123456789 in channel -1003180113623
+2025-11-15 17:55:49,880 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 123456789}" and files "None"
+2025-11-15 17:55:50,093 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: PARTICIPANT_ID_INVALID"}'"
+2025-11-15 17:55:50,093 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking single channel subscription for user 123456789 in -1003180113623: Participant_id_invalid
+2025-11-15 17:55:50,094 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 123456789 not found in channel -1003180113623 - not subscribed
+2025-11-15 17:55:50,094 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 123456789}" and files "None"
+2025-11-15 17:55:50,334 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: PARTICIPANT_ID_INVALID"}'"
+2025-11-15 17:55:50,335 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']
+2025-11-15 17:55:50,335 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV'])
+2025-11-15 17:55:50,335 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']) completed
+2025-11-15 17:55:50,336 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:50,336 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:50,336 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:50,337 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 123456789 in 1 channels
+2025-11-15 17:55:50,337 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 123456789 in channel -1003180113623
+2025-11-15 17:55:50,337 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 123456789}" and files "None"
+2025-11-15 17:55:50,620 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: PARTICIPANT_ID_INVALID"}'"
+2025-11-15 17:55:50,621 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking user 123456789 in channel -1003180113623: Participant_id_invalid
+2025-11-15 17:55:50,621 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - WARNING - Invalid participant ID 123456789 for channel -1003180113623
+2025-11-15 17:55:50,622 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']
+2025-11-15 17:55:50,622 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS'])
+2025-11-15 17:55:50,622 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']) completed
+2025-11-15 17:55:50,623 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:50,623 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:50,623 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:50,623 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 123456789 in 1 channels
+2025-11-15 17:55:50,623 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 123456789 in channel -1003180113623
+2025-11-15 17:55:50,624 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 123456789}" and files "None"
+2025-11-15 17:55:50,946 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: PARTICIPANT_ID_INVALID"}'"
+2025-11-15 17:55:50,947 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking user 123456789 in channel -1003180113623: Participant_id_invalid
+2025-11-15 17:55:50,947 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - WARNING - Invalid participant ID 123456789 for channel -1003180113623
+2025-11-15 17:55:50,947 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Single channel check: user 987654321 in channel -1003180113623
+2025-11-15 17:55:50,947 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 987654321}" and files "None"
+2025-11-15 17:55:51,146 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: member not found"}'"
+2025-11-15 17:55:51,147 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking single channel subscription for user 987654321 in -1003180113623: Member not found
+2025-11-15 17:55:51,147 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - User 987654321 not found in channel -1003180113623 - not subscribed
+2025-11-15 17:55:51,147 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 987654321}" and files "None"
+2025-11-15 17:55:51,371 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: member not found"}'"
+2025-11-15 17:55:51,371 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']
+2025-11-15 17:55:51,372 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV'])
+2025-11-15 17:55:51,372 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['MKw3eauV3ttiShf8tkVqYy48HoM8TDyKwFEzssCV']) completed
+2025-11-15 17:55:51,372 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:51,373 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:51,373 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:51,374 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 987654321 in 1 channels
+2025-11-15 17:55:51,374 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 987654321 in channel -1003180113623
+2025-11-15 17:55:51,374 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 987654321}" and files "None"
+2025-11-15 17:55:51,663 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: member not found"}'"
+2025-11-15 17:55:51,663 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking user 987654321 in channel -1003180113623: Member not found
+2025-11-15 17:55:51,663 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - WARNING - User 987654321 not found in channel -1003180113623 - likely not subscribed
+2025-11-15 17:55:51,664 - tortoise.db_client - DEBUG - SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?: ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']
+2025-11-15 17:55:51,664 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS'])
+2025-11-15 17:55:51,664 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "owner_id" "owner_id" FROM "giveaway" WHERE "callback_value"=?', ['UeevhTz3KQKdkNQndEsdbdC8CiBQ9x1wOdXBSjfS']) completed
+2025-11-15 17:55:51,665 - tortoise.db_client - DEBUG - SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?: [5935366564]
+2025-11-15 17:55:51,665 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564])
+2025-11-15 17:55:51,665 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "channel_id" "channel_id","name" "name","post_id" "post_id","group_id" "group_id" FROM "telegramchannel" WHERE "owner_id"=?', [5935366564]) completed
+2025-11-15 17:55:51,666 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking subscription for user 987654321 in 1 channels
+2025-11-15 17:55:51,666 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - INFO - Checking user 987654321 in channel -1003180113623
+2025-11-15 17:55:51,666 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 987654321}" and files "None"
+2025-11-15 17:55:51,867 - aiogram - DEBUG - Response for getChatMember: [400] "'{"ok":false,"error_code":400,"description":"Bad Request: member not found"}'"
+2025-11-15 17:55:51,868 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - ERROR - Error checking user 987654321 in channel -1003180113623: Member not found
+2025-11-15 17:55:51,868 - handlers.admin.functions_for_active_gives.check_channels_subscriptions - WARNING - User 987654321 not found in channel -1003180113623 - likely not subscribed
+2025-11-15 17:55:51,870 - aiogram - DEBUG - Make request: "getChatMember" with data: "{'chat_id': -1003180113623, 'user_id': 8500740359}" and files "None"
+2025-11-15 17:55:51,945 - aiogram - DEBUG - Response for getChatMember: [200] "'{"ok":true,"result":{"user":{"id":8500740359,"is_bot":true,"first_name":"test","username":"testolegavpopubot"},"status":"administrator","can_be_edited":false,"can_manage_chat":true,"can_change_info":true,"can_post_messages":true,"can_edit_messages":true,"can_delete_messages":true,"can_invite_users":true,"can_restrict_members":true,"can_promote_members":false,"can_manage_video_chats":true,"can_post_stories":true,"can_edit_stories":true,"can_delete_stories":true,"can_manage_direct_messages":true,"is_anonymous":false,"can_manage_voice_chats":true}}'"
+2025-11-15 17:55:51,946 - __main__ - ERROR - Critical error in debug: 'type'
+2025-11-15 17:55:51,948 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-15 17:55:51,969 - handlers.admin.functions_for_active_gives.handle_group_users - INFO - Processing participation from user 123456789 (@testuser) in group -1003180113623, replied to message 12345
+2025-11-15 17:55:51,971 - tortoise.db_client - DEBUG - SELECT "give_callback_value" "give_callback_value","post_id" "post_id","owner_id" "owner_id" FROM "telegramchannel" WHERE "group_id"=?: [-1003180113623]
+2025-11-15 17:55:51,971 - aiosqlite - DEBUG - executing functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "give_callback_value" "give_callback_value","post_id" "post_id","owner_id" "owner_id" FROM "telegramchannel" WHERE "group_id"=?', [-1003180113623])
+2025-11-15 17:55:51,972 - aiosqlite - DEBUG - operation functools.partial(<bound method Connection._execute_fetchall of <Connection(Thread-1, started 24076)>>, 'SELECT "give_callback_value" "give_callback_value","post_id" "post_id","owner_id" "owner_id" FROM "telegramchannel" WHERE "group_id"=?', [-1003180113623]) completed
+2025-11-15 17:55:51,973 - handlers.admin.functions_for_active_gives.handle_group_users - WARNING - No giveaway data found for group -1003180113623

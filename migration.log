@@ -1,0 +1,31 @@
+2025-11-15 18:35:07,620 - __main__ - INFO - 🚀 Starting database migration process...
+2025-11-15 18:35:07,621 - __main__ - INFO - ============================================================
+2025-11-15 18:35:07,622 - __main__ - INFO - Database backup created: db_backup_20251115_183507.sqlite3
+2025-11-15 18:35:07,622 - __main__ - INFO - Backup created: db_backup_20251115_183507.sqlite3
+2025-11-15 18:35:07,622 - __main__ - INFO - Starting database migration...
+2025-11-15 18:35:07,623 - __main__ - INFO - Adding early_finish column to giveaway table...
+2025-11-15 18:35:07,668 - __main__ - INFO - ✅ Column early_finish added successfully
+2025-11-15 18:35:07,669 - __main__ - INFO - Table bot_settings already exists
+2025-11-15 18:35:07,669 - __main__ - INFO - ✅ All migrations completed successfully
+2025-11-15 18:35:07,669 - __main__ - INFO - Verifying migration results...
+2025-11-15 18:35:07,669 - __main__ - INFO - Giveaway table columns: ['owner_id', 'run_status', 'type', 'name', 'callback_value', 'text', 'photo_id', 'video_id', 'over_date', 'captcha', 'winners_count', 'early_finish']
+2025-11-15 18:35:07,669 - __main__ - INFO - ✅ early_finish column verified in giveaway table
+2025-11-15 18:35:07,670 - __main__ - INFO - Bot_settings table columns: ['id', 'participation_keyword', 'created_at', 'updated_at']
+2025-11-15 18:35:07,670 - __main__ - INFO - ✅ Default settings found: ID=1, keyword='пенис'
+2025-11-15 18:35:07,779 - __main__ - INFO - ============================================================
+2025-11-15 18:35:07,779 - __main__ - INFO - 🧪 Testing Tortoise ORM integration...
+2025-11-15 18:35:08,270 - __main__ - INFO - Testing Tortoise ORM integration...
+2025-11-15 18:35:08,285 - __main__ - INFO - ✅ Tortoise ORM initialized successfully
+2025-11-15 18:35:08,286 - __main__ - INFO - ✅ BotSettings test passed, current keyword: 'пенис'
+2025-11-15 18:35:08,287 - __main__ - INFO - ✅ GiveAway model test passed, found 1 giveaways
+2025-11-15 18:35:08,287 - tortoise - INFO - Tortoise-ORM shutdown
+2025-11-15 18:35:08,288 - __main__ - INFO - ============================================================
+2025-11-15 18:35:08,288 - __main__ - INFO - 🎉 MIGRATION COMPLETED SUCCESSFULLY!
+2025-11-15 18:35:08,288 - __main__ - INFO - ============================================================
+2025-11-15 18:35:08,288 - __main__ - INFO - 
+2025-11-15 18:35:08,288 - __main__ - INFO - 📋 WHAT WAS DONE:
+2025-11-15 18:35:08,288 - __main__ - INFO - ✅ Added 'early_finish' column to 'giveaway' table
+2025-11-15 18:35:08,288 - __main__ - INFO - ✅ Created 'bot_settings' table with default settings
+2025-11-15 18:35:08,289 - __main__ - INFO - ✅ Verified Tortoise ORM compatibility
+2025-11-15 18:35:08,289 - __main__ - INFO - 
+2025-11-15 18:35:08,289 - __main__ - INFO - 🔄 RESTART YOUR BOT to apply changes
